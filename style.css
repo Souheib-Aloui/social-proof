@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap'); 
+
+:root {
+
+  --Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  
+  background-position: top 0 left 150px , bottom 0 right 0 ;
+ 
+}
+
+main {
+  width: 1200px;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.container .top-half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .top-half .main-heading .title {
+  color: var(--Dark-Magenta);
+  font-weight: 700;
+  width: 250px;
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.p-one {
+  color: var(--Dark-Grayish-Magenta);
+  width: 350px;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.ratings {
+  width: 400px;
+  align-content: flex-end;
+  margin-top: 30px;
+}
+
+.ratings .rating {
+  background-color: var(--Light-Grayish-Magenta);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  width: 400px;
+  padding: 18px;
+  border-radius: 12px ;
+}
+.top-half .p-two {
+  font-weight: 700;
+  color: var(--Dark-Magenta);
+}
+.ratings .rate-one {
+  margin-left: -110px;
+}
+.ratings .rate-two {
+  margin-left: -60px;
+}
+
+.container .bottom-half {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.container .bottom-half .profile-card {
+  background-color: var(--Dark-Magenta);
+  padding: 40px;
+  border-radius: 10px;
+  height: fit-content;
+}
+.bottom-half img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.profile-one {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+.name {
+  color: var(--White);
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.status {
+  color: var(--Soft-Pink);
+}
+.info {
+  line-height: 1.5;
+  color: var(--Light-Grayish-Magenta)
+}
+
+.roberts {
+  margin-top: 30px;
+}
+
+.wallace {
+  margin-top: 60px;
+}
+
+@media  (max-width: 625px) {
+  body {
+    overflow: visible;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left 0 top 0, right 0 bottom 60px;
+  }
+
+  main {
+    width: 300px;
+  }
+ 
+  .container {
+    max-width: 100%;
+  }
+  
+  .container .top-half {
+    flex-direction: column;
+  }
+
+  .container .top-half .title {
+    width: fit-content;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .container .top-half .p-one {
+    width: fit-content;
+    text-align: center;
+
+  }
+  .container .bottom-half {
+    grid-template-columns: 1fr;
+  }
+
+  .ratings .rate-one,
+  .ratings .rate-two  {
+    margin: 0 auto;
+  }
+
+  .container .ratings  {
+    max-width: 100%;
+  }
+  
+  .container .rating {
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  .container .rate .stars {
+    margin-bottom: 8px;
+  }
+}
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
